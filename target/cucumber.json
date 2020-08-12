@@ -1,0 +1,188 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3854759886,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 10,
+        "name": "Login with valid credentials",
+        "description": "",
+        "id": "login-features;login-with-valid-credentials;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 120863669,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 711328699,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "login credentials standard_user and secret_sauce",
+            "match": {
+              "arguments": [
+                {
+                  "val": "standard_user",
+                  "offset": 18
+                },
+                {
+                  "val": "secret_sauce",
+                  "offset": 36
+                }
+              ],
+              "location": "LoginStepDefinition.valid_login_credentials(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1323463167,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Click on login button",
+            "match": {
+              "location": "LoginStepDefinition.click_on_login_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5337736,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Verify home page",
+            "match": {
+              "location": "LoginStepDefinition.verify_home_page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Test"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1586667649,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "Verify error message showing properly for invalid credentials",
+        "description": "",
+        "id": "login-features;verify-error-message-showing-properly-for-invalid-credentials;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 74753352,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 345735513,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "login credentials check and check",
+            "match": {
+              "arguments": [
+                {
+                  "val": "check",
+                  "offset": 18
+                },
+                {
+                  "val": "check",
+                  "offset": 28
+                }
+              ],
+              "location": "LoginStepDefinition.valid_login_credentials(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 85704817,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Click on login button",
+            "match": {
+              "location": "LoginStepDefinition.click_on_login_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 27970182,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Verify error message",
+            "match": {
+              "location": "LoginStepDefinition.verify_error_message()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 12,
+            "name": "@Test"
+          }
+        ]
+      }
+    ],
+    "name": "Login features",
+    "description": "",
+    "id": "login-features",
+    "keyword": "Feature",
+    "uri": "Login.feature"
+  }
+]
