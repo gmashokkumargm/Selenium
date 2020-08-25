@@ -116,7 +116,7 @@ public class SeleniumBase extends Report {
 
 
 	public void closeBrowser() {
-		try{ 
+		try{   
 			driver.close();
 			stepReport("pass", "The browser has been closed");
 		}catch(Exception e){
