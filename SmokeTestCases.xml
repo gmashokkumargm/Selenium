@@ -8,10 +8,10 @@
 		</run>
 	</groups>
 
-  <test name="Test">
+  <test name="Test" preserve-order="true">
   	<classes>
   		<class name="com.framework.testcase.LoginTest"></class>
-  		<class name="com.framework.testcase.AddToCartTest"></class>
+   		<class name="com.framework.testcase.AddToCartTest"></class>
   	</classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

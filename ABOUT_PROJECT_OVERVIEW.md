@@ -17,7 +17,7 @@ scr/test/java
 To run my test case:
     Maven command: mvn clean
                    mvn build
-                   mvn test -Dbrowser=chrome/firefox -Pall/smoke/regression  -> passing browser parameter in order to run in specific browser we want
-                                                                             -> passing profile name to run specific type of test case.
+                   mvn test -Dbrowser=chrome/firefox -Pall/smoke/regression  -> passing browser parameter in order to run in specific browser we are mentioning -Dbrowser=browserName
+                                                                             -> passing profile name to run specific type of test case we are created a profiles -Pall/smoke/regression
                                                                              
 This maven command will help to integrate with Jenkins easily 

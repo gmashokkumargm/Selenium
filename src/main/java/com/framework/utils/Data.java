@@ -18,6 +18,10 @@ public class Data {
 	public static String browserName;
 	public static String invalidUserName;
 	public static String invalidPassword;
+	public static String firstName;
+	public static String lastName;
+	public static String zip;
+
 
 	
 	public void readPropertiesFile() {
@@ -37,6 +41,9 @@ public class Data {
 			 browserName= prop.getProperty("browserName");	
 			 invalidUserName= prop.getProperty("invalidUserName");			
 			 invalidPassword= prop.getProperty("invalidPassword");
+			 firstName = prop.getProperty("firstName");
+			 lastName = prop.getProperty("lastName");
+			 zip = prop.getProperty("zip");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

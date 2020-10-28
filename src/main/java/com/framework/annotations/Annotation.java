@@ -40,9 +40,4 @@ public class Annotation {
 	public void afterSuite(){
 		rep.endResult();
 	}
-	
-	
-	
-	
-	
 }

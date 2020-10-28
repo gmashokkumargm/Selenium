@@ -4,6 +4,7 @@
 
 package com.framework.reports;
 
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
@@ -28,11 +29,12 @@ public class Report {
 		if(status.equalsIgnoreCase("Pass")) {
 			test.pass(desc);			
 		} else if(status.equalsIgnoreCase("Fail")) {
-			test.fail(desc);			
+			test.fail(desc);	
 		} else if(status.equalsIgnoreCase("Warning")) {
 			test.warning(desc);			
 		}		
 	}
+	
 	
 	public void endResult(){
 		extent.flush();

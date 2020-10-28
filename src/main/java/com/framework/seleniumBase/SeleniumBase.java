@@ -26,6 +26,7 @@ public class SeleniumBase extends Report {
 	
 	public void startApp(String url){
 		String browser = System.getProperty("browser"); //Getting input from maven command
+		//String browser="chrome";
 		try{
 			if(browser.equalsIgnoreCase("chrome")){
 				System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
@@ -113,8 +114,25 @@ public class SeleniumBase extends Report {
 			stepReport("fail", "WebDriverException : "+e.getMessage());
 		}
 	}
-
-
+	
+	public void compareTwoValues(float a, float b){
+		if(a==b){
+			stepReport("pass", "The value "+a+" matches with value "+b);
+		}
+		else
+			stepReport("fail","The value did not match");
+	}
+	
+	public String getPartialText(WebElement ele, int fromIndex){
+		String partialText="";
+		try{
+			partialText = getText(ele).substring(fromIndex);
+		}catch(Exception e){
+			stepReport("fail","Exception occured while getting partial text");
+		}
+		return partialText;
+	}
+	
 	public void closeBrowser() {
 		try{   
 			driver.close();
@@ -123,5 +141,6 @@ public class SeleniumBase extends Report {
 			stepReport("fail","Failed to close the browser "+e.getMessage());
 		}
 	}
+
 	
 }

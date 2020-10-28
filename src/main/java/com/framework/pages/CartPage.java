@@ -35,5 +35,12 @@ public class CartPage {
 		return this;
 	}
 	
+	@FindBy(xpath = "//a[text()='CHECKOUT']")
+	WebElement btnCheckout;
+	public CheckoutStepOnePage clickCheckoutButton(){
+		base.click(btnCheckout, "checkout button");
+		return new CheckoutStepOnePage();
+	}
+	
 
 }

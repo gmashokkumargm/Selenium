@@ -34,7 +34,7 @@ public class HomePage {
 	@FindBy(xpath = "//div[@class='inventory_item']/div/button")
 	List <WebElement> eleAddToCart;
 	public HomePage addToCart(String itemName) {
-		for (int i=1; i<=eleListOfItems.size(); i++){
+		for (int i=0; i<eleListOfItems.size(); i++){
 			String req = eleListOfItems.get(i).getText();
 			if(req.equals(itemName)){
 				base.verifyExactText(eleListOfItems.get(i), itemName );

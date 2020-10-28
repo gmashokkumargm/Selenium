@@ -16,17 +16,18 @@ public class LoginTest extends Annotation{
 	
 	Report rep = new Report();
 	
-	@Test(priority=1,groups="smoke")
+	@Test(groups="smoke")
 	public void validLoginTest(){
 		rep.startTestCase("Login_001", "check whether we can able to login with valid credentials or not");
 		new LoginPage().loginWithValidCredentials(Data.validUserName, Data.validPassword)
 		.verifyLoginSuccess();	
 	}
 	
-	@Test(priority=2, groups="regression")
+	@Test(groups="regression")
 	public void checkErrorMessage(){
 		rep.startTestCase("Login_002", "Check whether error message is showing or not for invalid credentials");
-		new LoginPage().loginWithInvalidCredentials(Data.invalidUserName, Data.invalidPassword).verifyErrorMessage();
+		new LoginPage().loginWithInvalidCredentials(Data.invalidUserName, Data.invalidPassword)
+		.verifyErrorMessage();
 	}	
 	
 }
