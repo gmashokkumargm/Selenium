@@ -25,8 +25,8 @@ public class SeleniumBase extends Report {
 	public static WebDriver driver;
 	
 	public void startApp(String url){
-		String browser = System.getProperty("browser"); //Getting input from maven command
-		//String browser="chrome";
+		//String browser = System.getProperty("browser"); //Getting input from maven command
+		String browser="chrome";
 		try{
 			if(browser.equalsIgnoreCase("chrome")){
 				System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
